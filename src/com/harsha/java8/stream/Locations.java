@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.harsha.java8.collection;
+package com.harsha.java8.stream;
 
 import java.util.Arrays;
 import java.util.List;
