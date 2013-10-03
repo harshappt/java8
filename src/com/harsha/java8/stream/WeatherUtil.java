@@ -30,13 +30,18 @@ public class WeatherUtil {
             HashMap readValue = mapper.readValue(collect, java.util.HashMap.class);
         
             String temp =(String)((HashMap)((HashMap)((HashMap)((HashMap)((HashMap)readValue.get("query")).get("results")).get("channel")).get("item")).get("condition")).get("temp");
-           
+            String text =(String)((HashMap)((HashMap)((HashMap)((HashMap)readValue.get("query")).get("results")).get("channel")).get("item")).get("title");
             
-            System.out.println(temp);          
-            
-            return null;//new Weather(woeid,city,temp);
+            return new Weather(zipCode,text,new Integer(temp));
         }catch(Exception e){
             throw new RuntimeException(e);
         }
     }
+     
+     public static Weather highTempLocation(Weather w1, Weather w2){
+         return w1.getTemp() > w2.getTemp() ? w1 : w2;
+     }
+
+
+
 }

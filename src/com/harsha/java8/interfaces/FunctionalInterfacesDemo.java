@@ -29,7 +29,7 @@ public class FunctionalInterfacesDemo {
         java.lang.Runnable
         java.util.concurrent.Callable
         java.security.PrivilegedAction
-        java.util.Comparator
+        java.util.Comparatoro
         java.io.FileFilter
         java.beans.PropertyChangeListener
         */

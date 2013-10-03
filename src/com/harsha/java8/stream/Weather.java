@@ -21,6 +21,9 @@ public class Weather {
        this.city = city;
        this.temp = temp;
    }
+   
+   public Weather(){
+   }
 
     public String getCity() {
         return city;
